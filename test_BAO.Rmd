@@ -1,0 +1,27 @@
+---
+title: "test_BAO"
+author: "virgile-baudrot"
+date: "Sunday, November 30, 2014"
+output: html_document
+---
+
+## vector.to.Matlab
+
+Generation of a random vector
+
+```{r}
+myVec<-rnorm(1000,0,12)
+```
+
+Test of the function `vector.to.Matlab(x,vect.name) which return a vector easy to copy past in *Matlab* from a vector written in *R*.
+
+```{r}
+my.vec<-vector.to.Matlab(myVec)
+```
+
+It is easy to write the vector in a txt file:
+
+```{r}
+write(my.vec,file="my_vec.txt")
+```
+
