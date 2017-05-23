@@ -3,8 +3,7 @@
 #' @param by number: increment of the sequence.
 #' @param length desired length of the sequence. A non-negative number.
 
-lseq <- function(from, to, by=1, length = NULL, base = exp(1)) {
-  if(!is.null(length)) { by = ((to - from)/(length.out - 1)) }
- .lseq <- base^(seq(log(from, base = base),log(to, base = base),length.out=length.out))
+lseq <- function(from, to, length = 2, base = exp(1)) {
+  .lseq <- base^(seq(log(from, base = base),log(to, base = base), length.out = length))
   return(.lseq)
 }
