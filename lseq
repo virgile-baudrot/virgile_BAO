@@ -1,0 +1,10 @@
+#' Generates a logarithmically spaced sequence (like in the 'emdbook' package by Ben Bolker)
+#' @paramfrom, to	the starting and (maximal) end values of the sequence. Of length 1 unless just from is supplied as an unnamed argument.
+#' @param by number: increment of the sequence.
+#' @param length desired length of the sequence. A non-negative number.
+
+lseq <- function(from, to, by=1, length = NULL) {
+if(!is.null(length)) by = ((to - from)/(length.out - 1))
+ .lseq =   exp(seq(log(from),log(to),length.out=length.out))
+return(.lseq)
+}
